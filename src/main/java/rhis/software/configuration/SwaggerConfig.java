@@ -23,7 +23,7 @@ import springfox.documentation.spring.web.plugins.Docket;
         }
         private ApiInfo apiInfo(){
             return new ApiInfoBuilder()
-                    .title("Swagger config pour examen by houssem eddin loudhabachi")
+                    .title("Swagger Test")
                     .description("Spring boot swagger config")
                     .version("2.0")
                     .build();
