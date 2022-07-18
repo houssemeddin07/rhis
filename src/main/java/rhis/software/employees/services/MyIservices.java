@@ -1,17 +1,16 @@
 package rhis.software.employees.services;
 
-import org.apache.catalina.User;
 import rhis.software.employees.entities.*;
 
 import java.util.List;
 
 public interface MyIservices {
 
-    public List<User_> userdisplayAll();
-    public User_ addUser(User_ u);
-    public User_ modifyUser(User_ u);
+    public List<User> userdisplayAll();
+    public User addUser(User u);
+    public User modifyUser(User u);
     public void deleteUser(long id);
-    public User_ retrieveUser(long id);
+    public User retrieveUser(long id);
 
     public List<Role> roledisplayAll();
     public Role addRole(Role r);

@@ -13,15 +13,15 @@ public class myController {
     MyIservices service;
 
     @GetMapping("/getusers")
-    public List<User_> getAllUsers(){
+    public List<User> getAllUsers(){
         return service.userdisplayAll();
     }
     @PutMapping("/modifyuser")
-    public User_ modifyUser(@RequestBody User_ u){
+    public User modifyUser(@RequestBody User u){
         return service.modifyUser(u);
     }
     @PostMapping("/adduser")
-    public User_ adduser(@RequestBody User_ u){
+    public User adduser(@RequestBody User u){
         return service.addUser(u);
     }
     @DeleteMapping("/deleteuser/{id}")
@@ -30,7 +30,7 @@ public class myController {
 
     }
     @GetMapping("/retriveuser/{id}")
-    public  User_ retrieveuser(@PathVariable("id")long id){
+    public User retrieveuser(@PathVariable("id")long id){
        return service.retrieveUser(id);
     }
 

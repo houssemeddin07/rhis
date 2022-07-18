@@ -19,7 +19,7 @@ public class Affectation {
         private long id;
 
     @ManyToOne
-    User_ user;
+    User user;
     @ManyToOne
     Role role_a;
 }

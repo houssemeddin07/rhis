@@ -27,18 +27,18 @@ public class MyServices implements MyIservices {
     private droitRepository dr;
 
     @Override
-    public List<User_> userdisplayAll() {
+    public List<User> userdisplayAll() {
 
-        return (List<User_>) ur.findAll();
+        return (List<User>) ur.findAll();
     }
 
     @Override
-    public User_ addUser(User_ u) {
+    public User addUser(User u) {
         return ur.save(u);
     }
 
     @Override
-    public User_ modifyUser(User_ u) {
+    public User modifyUser(User u) {
         return ur.save(u);
     }
 
@@ -48,7 +48,7 @@ public class MyServices implements MyIservices {
     }
 
     @Override
-    public User_ retrieveUser(long id) {
+    public User retrieveUser(long id) {
         return ur.findById(id).get();
     }
 
@@ -81,7 +81,7 @@ public class MyServices implements MyIservices {
     @Override
     public Affectation addAffectation(Affectation a, long role_id, long user_id) {
         Role r=rr.findById(role_id).orElse(null);
-        User_ u=ur.findById(user_id).orElse(null);
+        User u=ur.findById(user_id).orElse(null);
         a.setUser(u);
         a.setRole_a(r);
 
@@ -91,7 +91,7 @@ public class MyServices implements MyIservices {
     @Override
     public Affectation modifyAffectation(Affectation a, long role_id, long user_id) {
         Role r=rr.findById(role_id).orElse(null);
-        User_ u=ur.findById(user_id).orElse(null);
+        User u=ur.findById(user_id).orElse(null);
         a.setUser(u);
         a.setRole_a(r);
 
